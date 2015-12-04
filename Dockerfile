@@ -12,5 +12,6 @@ RUN gem install librarian-puppet
 ADD Puppetfile /
 RUN librarian-puppet install
 RUN puppet apply --modulepath=/modules -e "include java8 class { 'tomcat':version => '7',java_home => '/usr/lib/jvm/java-8-oracle'}"
+RUN apt-get remove -y make puppet build-essential ruby-dev
 COPY hello-spring/target/hello-spring.war /var/lib/tomcat7/webapps/
 EXPOSE 8080

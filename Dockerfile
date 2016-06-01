@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER arpitaggarwal "aggarwalarpit.89@gmail.com"
 RUN apt-get -y update
 RUN apt-get -q -y install git
-RUN sudo apt-get install -y ruby
+RUN apt-get install -y ruby
 RUN apt-get install -y ruby-dev
 RUN apt-get -y update
 RUN apt-get install -y make
